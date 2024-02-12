@@ -1,0 +1,3 @@
+execute in the_end as @e[type=!player,tag=!dihpmod,tag=!passive,distance=..100000] run attribute @s generic.max_health modifier add 6be7dbc1-6889-43c5-bcf7-a1706fc1e1d7 "hpmod2" 0.5 multiply
+execute in the_end as @e[type=!player,tag=!dihpmod,tag=!passive,distance=..100000] store result entity @s Health float 1 run attribute @s generic.max_health get 1
+execute in the_end as @e[type=!player,tag=!dihpmod,tag=!passive,distance=..100000] run tag @s add dihpmod

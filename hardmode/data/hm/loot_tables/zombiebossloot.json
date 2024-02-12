@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:netherite_sword",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{display:{Name:'{\"text\":\"Fury Brandished\",\"color\":\"dark_red\",\"bold\":true}'},Unbreakable:1b,zombiesword:1b,Enchantments:[{id:\"minecraft:smite\",lvl:1s},{id:\"minecraft:knockback\",lvl:2s},{id:\"minecraft:looting\",lvl:3s}],AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:12,Operation:0,UUID:[I;-1921429075,-415480316,-1908123009,602910500],Slot:\"mainhand\"},{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-0.6,Operation:2,UUID:[I;1999455155,-1063171524,-1690108826,-953457969],Slot:\"mainhand\"}]}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,3 @@
+execute in overworld as @e[type=!player,tag=!dihpmod,tag=!passive,distance=..100000] run attribute @s generic.max_health modifier add 0e31006e-3653-488f-ad51-b55b75aec46b "hpmod2" 0 multiply
+execute in overworld as @e[type=!player,tag=!dihpmod,tag=!passive,distance=..100000] store result entity @s Health float 1 run attribute @s generic.max_health get 1
+execute in overworld as @e[type=!player,tag=!dihpmod,tag=!passive,distance=..100000] run tag @s add dihpmod

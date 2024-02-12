@@ -1,0 +1,3 @@
+execute in the_nether as @e[type=!player,tag=!dihpmod,tag=!passive,distance=..100000] run attribute @s generic.max_health modifier add 5cdac6bb-2711-4f34-8772-513ec28c1ce8 "hpmod2" 0.2 multiply
+execute in the_nether as @e[type=!player,tag=!dihpmod,tag=!passive,distance=..100000] store result entity @s Health float 1 run attribute @s generic.max_health get 1
+execute in the_nether as @e[type=!player,tag=!dihpmod,tag=!passive,distance=..100000] run tag @s add dihpmod

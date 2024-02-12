@@ -1,0 +1,42 @@
+execute at @s if entity @e[distance=..100,tag=boss7arena] run tag @s remove wsbs
+execute as @s[tag=wsbs] at @s run summon armor_stand ~ ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["boss7arena"],DisabledSlots:4144959}
+execute as @s[tag=wsbs] at @s run fill ~50 ~11 ~50 ~ ~ ~ air replace #mineable/pickaxe
+execute as @s[tag=wsbs] at @s run fill ~50 ~11 ~50 ~ ~ ~ air replace #mineable/shovel
+execute as @s[tag=wsbs] at @s run fill ~50 ~11 ~50 ~ ~ ~ air replace #mineable/hoe
+execute as @s[tag=wsbs] at @s run fill ~50 ~11 ~50 ~ ~ ~ air replace #mineable/axe
+execute as @s[tag=wsbs] at @s run fill ~50 ~11 ~50 ~ ~ ~ air replace lava
+execute as @s[tag=wsbs] at @s run fill ~50 ~11 ~50 ~ ~ ~ air replace fire
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~50 ~ ~ ~ air replace #mineable/pickaxe
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~50 ~ ~ ~ air replace #mineable/shovel
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~50 ~ ~ ~ air replace #mineable/hoe
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~50 ~ ~ ~ air replace #mineable/axe
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~50 ~ ~ ~ air replace lava
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~50 ~ ~ ~ air replace fire
+execute as @s[tag=wsbs] at @s run fill ~50 ~11 ~-50 ~ ~ ~ air replace #mineable/pickaxe
+execute as @s[tag=wsbs] at @s run fill ~50 ~11 ~-50 ~ ~ ~ air replace #mineable/shovel
+execute as @s[tag=wsbs] at @s run fill ~50 ~11 ~-50 ~ ~ ~ air replace #mineable/hoe
+execute as @s[tag=wsbs] at @s run fill ~50 ~11 ~-50 ~ ~ ~ air replace #mineable/axe
+execute as @s[tag=wsbs] at @s run fill ~50 ~11 ~-50 ~ ~ ~ air replace lava
+execute as @s[tag=wsbs] at @s run fill ~50 ~11 ~-50 ~ ~ ~ air replace fire
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~-50 ~ ~ ~ air replace #mineable/pickaxe
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~-50 ~ ~ ~ air replace #mineable/shovel
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~-50 ~ ~ ~ air replace #mineable/hoe
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~-50 ~ ~ ~ air replace #mineable/axe
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~-50 ~ ~ ~ air replace lava
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~-50 ~ ~ ~ air replace fire
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~50 ~50 ~ ~50 deepslate_bricks
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~-50 ~50 ~ ~-50 deepslate_bricks
+execute as @s[tag=wsbs] at @s run fill ~-50 ~11 ~50 ~-50 ~ ~-50 deepslate_bricks
+execute as @s[tag=wsbs] at @s run fill ~50 ~11 ~50 ~50 ~ ~-50 deepslate_bricks
+execute as @s[tag=wsbs] at @s run fill ~-50 ~ ~-50 ~50 ~ ~50 obsidian
+execute as @s[tag=wsbs] at @s run fill ~-40 ~ ~-40 ~40 ~ ~40 polished_blackstone
+execute as @s[tag=wsbs] at @s run fill ~-11 ~ ~-11 ~11 ~ ~11 red_nether_bricks
+execute as @s[tag=wsbs] at @s run fill ~-10 ~ ~-10 ~10 ~ ~10 black_glazed_terracotta
+execute as @e[tag=boss7arena] at @s run tag @a add notinboss7arena
+execute as @s[tag=wsbs] at @s run summon wither_skeleton ~ ~1 ~ {Silent:1b,CustomNameVisible:1b,DeathLootTable:"hm:zombiebossloot",PersistenceRequired:1b,Health:200f,Tags:["witherboss","armourchecked","weaponchecked"],CustomName:'{"text":"Emperor of Shade","color":"#871700","bold":true,"italic":true}',HandItems:[{id:"minecraft:netherite_sword",Count:1b,tag:{display:{Name:'{"text":"Darkflame Kingsword","color":"#9C001F","bold":true,"italic":false}'},Unbreakable:1b,Enchantments:[{id:"minecraft:sharpness",lvl:4s},{id:"minecraft:knockback",lvl:3s},{id:"minecraft:looting",lvl:2s},{id:"minecraft:unbreaking",lvl:3s},{id:"minecraft:mending",lvl:1s}]}},{}],HandDropChances:[0F,0F],ArmorItems:[{id:"minecraft:netherite_boots",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:feather_falling",lvl:255s}]}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:5846327},Unbreakable:1b}},{id:"minecraft:netherite_chestplate",Count:1b,tag:{Unbreakable:1b}},{id:"minecraft:netherite_helmet",Count:1b,tag:{Unbreakable:1b,Enchantments:[{id:"minecraft:fire_protection",lvl:40s},{id:"minecraft:projectile_protection",lvl:40s}]}}],ArmorDropChances:[0.000F,0.000F,0.000F,0.000F],ActiveEffects:[{Id:12,Amplifier:0b,Duration:9999999,ShowParticles:0b}],Attributes:[{Name:"generic.max_health",Base:200},{Name:"generic.follow_range",Base:500},{Name:"generic.movement_speed",Base:0.3},{Name:"generic.attack_damage",Base:1},{Name:"generic.armor",Base:-200},{Name:"generic.armor_toughness",Base:-200}]}
+execute as @s[tag=wsbs] at @s run scoreboard players set @e[tag=witherboss,sort=nearest,limit=1] hp_prev 0
+execute as @s[tag=wsbs] at @s run playsound entity.wither.spawn master @a ~ ~ ~ 500 1 1
+execute as @s[tag=wsbs] run tellraw @a [{"text":"An Emperor of Shade has Spawned in the vicinity! ","color":"red","bold":true},{"text":"Teleport to Boss","color":"red","bold":true,"underlined":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Teleport to the Nearest Emperor of Shade","color":"dark_red","bold":true,"italic":true}]},"clickEvent":{"action":"suggest_command","value":"/trigger tpboss7 set 1"}}]
+execute as @s[tag=wsbs] run tp @s ~ ~-999 ~
+execute as @s[tag=wsbs] run kill @s
+tag @s add bosschecked
